@@ -8,12 +8,33 @@
   <script defer src="/static/main.js"></script>
 </head>
 <body>
-  <!-- header 생략 (위와 동일 패턴) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-title-area">
+        <h1 class="site-title">교직원용 비공식 업무보조 페이지</h1>
+        <p class="site-subtitle">연간 일정 & 시기별 체크리스트</p>
+      </div>
+      <nav class="site-nav">
+        <button class="nav-toggle" aria-label="메뉴 열기/닫기">메뉴</button>
+        <ul class="nav-list">
+          <li><a href="/">홈</a></li>
+          <li><a href="/guide/">업무 기본 안내</a></li>
+          <li><a href="/frequently-asked-questions/">FAQ</a></li>
+          <li><a href="/calendar/" class="is-active">연간 일정</a></li>
+          <li><a href="/contract/">공무직·늘봄</a></li>
+          <li><a href="/checklist/">체크리스트</a></li>
+          <li><a href="/forms/">서식 도움</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="page-main">
     <section class="card">
       <h2>연간 대략적인 업무 흐름</h2>
-      <p>학교별로 세부 일정은 다를 수 있으나, 대략 다음과 같은 흐름으로 업무가 집중되는 편입니다.</p>
+      <p>
+        학교별로 세부 일정은 다를 수 있으나, 대략 다음과 같은 흐름으로 업무가 집중되는 편입니다.
+      </p>
       <table class="simple-table">
         <thead>
           <tr>
@@ -33,17 +54,29 @@
             <td>2학기 시작, 각종 사업 재개, 계약 연장 여부 검토</td>
             <td>운영 계획 재점검, 필요 인력·예산 재확인</td>
           </tr>
-          <!-- 계속 추가 -->
+          <!-- 필요에 따라 계속 추가 -->
         </tbody>
       </table>
     </section>
 
     <section class="card dev-note is-hidden">
       <h2>작성자 메모(내부용)</h2>
-      <p>특히 힘들었던 달, 이유를 간단히 메모해 두면 나중에 자동화 우선순위 정할 때 도움됨.</p>
+      <p>특히 힘들었던 달, 이유를 간단히 메모해 두면 자동화/개선 우선순위 잡을 때 도움.</p>
     </section>
   </main>
 
-  <!-- footer 동일 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-main">
+        본 페이지는 편의를 위한 비공식 안내 자료이며, 실제 업무 처리 전에는 반드시 관련 규정과 행정실 담당자와의 최종 확인이 필요합니다.
+      </p>
+      <p class="footer-meta">
+        &copy; eduworkhaey · 연간 일정
+      </p>
+      <button class="dev-note-toggle" type="button">
+        작성자 메모 보기/숨기기
+      </button>
+    </div>
+  </footer>
 </body>
 </html>

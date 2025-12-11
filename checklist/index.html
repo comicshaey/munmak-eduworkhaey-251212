@@ -3,12 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>자주 틀리는 사안 모음 | eduworkhaey</title>
+  <title>체크리스트(자주 틀리는 사안 모음) | eduworkhaey</title>
   <link rel="stylesheet" href="/static/style.css" />
   <script defer src="/static/main.js"></script>
 </head>
 <body>
-  <!-- header 동일 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-title-area">
+        <h1 class="site-title">교직원용 비공식 업무보조 페이지</h1>
+        <p class="site-subtitle">체크리스트 · 자주 틀리는 사안 모음</p>
+      </div>
+      <nav class="site-nav">
+        <button class="nav-toggle" aria-label="메뉴 열기/닫기">메뉴</button>
+        <ul class="nav-list">
+          <li><a href="/">홈</a></li>
+          <li><a href="/guide/">업무 기본 안내</a></li>
+          <li><a href="/frequently-asked-questions/">FAQ</a></li>
+          <li><a href="/calendar/">연간 일정</a></li>
+          <li><a href="/contract/">공무직·늘봄</a></li>
+          <li><a href="/checklist/" class="is-active">체크리스트</a></li>
+          <li><a href="/forms/">서식 도움</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main class="page-main">
     <section class="card">
@@ -18,28 +37,40 @@
         특정인을 지적하기 위한 목적이 아니며, 서로의 시간을 절약하기 위한 참고용입니다.
       </p>
 
-      <article class="checklist-item">
-        <h3>1. “이미 진행한 뒤에 나중에 결재·처리 요청” 패턴</h3>
+      <article class="error-item">
+        <h3>1. 이미 진행한 뒤에 나중에 결재·처리 요청</h3>
         <ul class="bullet-list">
           <li>예: 이미 외부강의·행사가 끝난 뒤 강사비나 여비를 요청</li>
           <li>예: 물품을 이미 구입한 뒤 영수증만 들고 와서 처리 요청</li>
         </ul>
         <p class="info-text">
           행정 절차상 사전 결재·계획이 필요한 업무는,
-          사후 처리로 전환되면 규정에 맞게 처리하기 어려워지거나 불가능해질 수 있습니다.
+          사후 처리로 전환되면 규정에 맞게 처리하기 어렵거나 불가능해질 수 있습니다.
           꼭 <strong>사전에 행정실과 상의</strong>해 주세요.
         </p>
       </article>
 
-      <!-- 이런 식으로 번호만 올려가며 계속 추가 -->
+      <!-- 번호 올리면서 계속 추가 -->
     </section>
 
     <section class="card dev-note is-hidden">
       <h2>작성자 메모(내부용)</h2>
-      <p>여기는 솔직한 감정 메모를 짧게 남겨도 됨. (외부 비노출 전제)</p>
+      <p>여기는 딱밤 욕구를 정제해서 조용히 쌓아두는 구역이라고 생각하면 됨.</p>
     </section>
   </main>
 
-  <!-- footer 동일 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-main">
+        본 페이지는 편의를 위한 비공식 안내 자료이며, 실제 업무 처리 전에는 반드시 관련 규정과 행정실 담당자와의 최종 확인이 필요합니다.
+      </p>
+      <p class="footer-meta">
+        &copy; eduworkhaey · 체크리스트
+      </p>
+      <button class="dev-note-toggle" type="button">
+        작성자 메모 보기/숨기기
+      </button>
+    </div>
+  </footer>
 </body>
 </html>
