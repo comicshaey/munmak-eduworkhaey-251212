@@ -32,3 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
 });
+
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add("is-visible");
+    } else {
+      scrollTopBtn.classList.remove("is-visible");
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
