@@ -31,7 +31,7 @@ html {
 
 @media (max-width: 600px) {
   html {
-    font-size: 15px;
+    : 15px;
   }
 }
 
@@ -87,7 +87,7 @@ a:hover {
 /* ✅ 좌측 상단 타이틀: 1.5배 */
 .site-title {
   display: inline-block; /* 타이틀이 a 태그여도 안정 */
-  font-size: 1.25em;
+  font-size: 1.75em;
   line-height: 1.2;
   font-weight: 700; /* 가독성 보정(필요 없으면 지워도 됨) */
 }
@@ -511,6 +511,7 @@ a:hover {
 #scrollTopBtn:hover {
   transform: translateY(-3px);
 }
+
 
 
 
