@@ -23,7 +23,7 @@
       <section class="page-wrap">
         <h1 class="page-title">업무 백과사전</h1>
         <p class="page-subtitle">
-          왼쪽 사이드바에서 항목 선택하면 해당 설명으로 스크롤 이동함.
+          왼쪽 사이드바에서 항목 선택하면 해당 설명으로 스크롤 이동합니다.
         </p>
 
         <div class="docs-layout">
@@ -32,17 +32,18 @@
             <div class="docs-sidebar-title">업무 분류</div>
 
             <div class="docs-nav-group" id="section-bokmu">
-              <div class="docs-nav-group-title"> 복무·근무상황 관련</div>
-              <ul class="docs-nav-list">
-                <li><a href="#doc-bokmu-flow" class="is-current">복무 처리 기본 흐름</a></li>
+              <div class="docs-nav-group-title">복무·근무상황 관련</div>
+              <!-- ✅ class 통일: docs-nav -->
+              <ul class="docs-nav">
+                <li><a href="#doc-bokmu-flow">복무 처리 기본 흐름</a></li>
                 <li><a href="#doc-bokmu-yeonga">교육공무직 재량휴업일 복무 처리 방법</a></li>
                 <li><a href="#doc-bokmu-byeongga">조리종사원 산업안전보건교육 복무 처리 방법</a></li>
               </ul>
             </div>
 
             <div class="docs-nav-group" id="section-gyeoyak">
-              <div class="docs-nav-group-title"> 카테고리 2</div>
-              <ul class="docs-nav-list">
+              <div class="docs-nav-group-title">카테고리 2</div>
+              <ul class="docs-nav">
                 <li><a href="#doc-gyeoyak-overview">항목 2-1</a></li>
                 <li><a href="#doc-gyeoyak-flow">항목 2-2</a></li>
               </ul>
@@ -50,7 +51,7 @@
 
             <div class="docs-nav-group" id="section-yeobi">
               <div class="docs-nav-group-title">카테고리 3</div>
-              <ul class="docs-nav-list">
+              <ul class="docs-nav">
                 <li><a href="#doc-yeobi-gwannae">항목 3-1</a></li>
                 <li><a href="#doc-yeobi-gwanoe">항목 3-2</a></li>
               </ul>
@@ -58,60 +59,64 @@
           </aside>
 
           <!-- 우측 본문 -->
-          <article class="docs-content">
-            <h2 id="doc-bokmu-flow">복무 처리 기본 흐름</h2>
-            <p>
-              사전 신청이 원칙. 어쩌고 저쩌고 설명 계속 ~~~
-            </p>
-            <ul>
-              <li> 설명 1</li>
-              <li> 설명 2</li>
-              <li> 설명 3</li>
-              <li> 설명 4</li>
-            </ul>
+          <div class="docs-content">
 
-            <h2 id="doc-bokmu-yeonga">교육공무직 재량휴업일 복무 처리 방법</h2>
-            <p>
-              관련 설명 쭉쭉쭉~~
-            </p>
+            <!-- ✅ 섹션 카드로 감싸기 -->
+            <article id="doc-bokmu-flow" class="docs-section">
+              <h2>복무 처리 기본 흐름</h2>
+              <p>사전 신청이 원칙. 어쩌고 저쩌고 설명 계속 ~~~</p>
+              <ul>
+                <li>설명 1</li>
+                <li>설명 2</li>
+                <li>설명 3</li>
+                <li>설명 4</li>
+              </ul>
+            </article>
 
-            <h2 id="doc-bokmu-byeongga">조리종사원 산업안전보건교육 복무 처리 방법</h2>
-            <p>
-              관련 문서 번호, 업무 편람 등 설명 ~~~
-            </p>
+            <article id="doc-bokmu-yeonga" class="docs-section">
+              <h2>교육공무직 재량휴업일 복무 처리 방법</h2>
+              <p>관련 설명 쭉쭉쭉~~</p>
+            </article>
 
-            <h2 id="doc-gyeoyak-overview">항목 2-1 </h2>
-            <p>
-              대충 설명 쭉~~
-            </p>
+            <article id="doc-bokmu-byeongga" class="docs-section">
+              <h2>조리종사원 산업안전보건교육 복무 처리 방법</h2>
+              <p>관련 문서 번호, 업무 편람 등 설명 ~~~</p>
+            </article>
 
-            <h2 id="doc-gyeoyak-flow">항목 2-2 </h2>
-            <p>
-              설명.
-            </p>
+            <article id="doc-gyeoyak-overview" class="docs-section">
+              <h2>항목 2-1</h2>
+              <p>대충 설명 쭉~~</p>
+            </article>
 
-            <h2 id="doc-yeobi-gwannae">항목 3-1 </h2>
-            <p> 설명 </p>
+            <article id="doc-gyeoyak-flow" class="docs-section">
+              <h2>항목 2-2</h2>
+              <p>설명.</p>
+            </article>
 
-            <h2 id="doc-yeobi-gwanoe">항목 3-2 </h2>
-            <p>설명.</p>
-          </article>
+            <article id="doc-yeobi-gwannae" class="docs-section">
+              <h2>항목 3-1</h2>
+              <p>설명</p>
+            </article>
+
+            <article id="doc-yeobi-gwanoe" class="docs-section">
+              <h2>항목 3-2</h2>
+              <p>설명.</p>
+            </article>
+
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- ✅ footer는 공통 주입 방식으로 통일 -->
     <footer class="site-footer">
-      <div class="site-footer-inner">
-        제작자: 씩씩하고 귀여운 고주무관 · Contact: edusproutcmomics@naver.com · 학교 공식 홈페이지가 아닌, 개인적인 토이 프로젝트입니다.
-      </div>
+      <div class="site-footer-inner" data-global-footer></div>
     </footer>
   </div>
 
-  <button id="scrollTopBtn" aria-label="위로 가기">
-    
+  <!-- ✅ 버튼/스크립트 태그 정상 닫힘 -->
+  <button id="scrollTopBtn" aria-label="위로 가기">↑</button>
+  <script src="/static/site-common.js"></script>
+  <script src="/static/site.js"></script>
 </body>
 </html>
-
-
-
-
