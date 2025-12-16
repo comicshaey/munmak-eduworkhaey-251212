@@ -7,15 +7,14 @@
   box-sizing: border-box;
 }
 
-/* 컬러 변수 느낌으로 통일해서 사용 */
+/* 컬러 변수 */
 :root {
   --bg-body: #f5f5f7;
   --bg-card: #ffffff;
 
---bg-soft: #eef2f6;
---primary-soft: #eef2f6;
---primary: #d6e0ea;
-
+  --bg-soft: #eef2f6;
+  --primary-soft: #eef2f6;
+  --primary: #d6e0ea;
 
   --border: #e4dfe8;
   --text-main: #111111;
@@ -24,14 +23,14 @@
   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* 기본 타이포 & 반응형 글자 크기 */
+/* 기본 타이포 */
 html {
   font-size: 16px;
 }
 
 @media (max-width: 600px) {
   html {
-    : 15px;
+    font-size: 15px;
   }
 }
 
@@ -56,7 +55,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 레이아웃 기본 골격 */
+/* ============================
+   레이아웃
+   ============================ */
 .layout-page {
   min-height: 100vh;
   display: flex;
@@ -84,12 +85,11 @@ a:hover {
   justify-content: space-between;
 }
 
-/* ✅ 좌측 상단 타이틀: 1.5배 */
 .site-title {
-  display: inline-block; /* 타이틀이 a 태그여도 안정 */
+  display: inline-block;
   font-size: 1.75em;
   line-height: 1.2;
-  font-weight: 700; /* 가독성 보정(필요 없으면 지워도 됨) */
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -109,8 +109,6 @@ a:hover {
   border-radius: 999px;
   font-size: 1rem;
   border: 1px solid transparent;
-  background: transparent;
-  text-decoration: none;
 }
 
 .site-nav a:hover {
@@ -136,7 +134,6 @@ a:hover {
   padding: 24px 16px 32px;
 }
 
-/* 섹션 제목 공통 */
 .page-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -162,257 +159,12 @@ a:hover {
   margin: 0 auto;
   padding: 10px 16px 16px;
   font-size: 0.8rem;
-  color: #666666;
+  color: #666;
   text-align: center;
 }
 
 /* ============================
-   1) 홈 - 카드형 레이아웃
-   ============================ */
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-@media (max-width: 900px) {
-  .home-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .home-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.home-card {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 16px 18px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.home-card-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  background: var(--primary-soft);
-  color: #333333;
-}
-
-.home-card-title {
-  font-size: 1.02rem;
-  font-weight: 600;
-}
-
-.home-card-desc {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
-.home-card-footer {
-  margin-top: 6px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* ============================
-   2) 문서 포털 레이아웃
-   ============================ */
-.docs-layout {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 900px) {
-  .docs-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.docs-sidebar {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 14px 12px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-  position: sticky;
-  top: 60px;
-  height: fit-content;
-}
-
-.docs-sidebar-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.docs-nav-group {
-  margin-bottom: 10px;
-}
-
-.docs-nav-group-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin: 8px 4px 4px;
-  color: #555555;
-}
-
-.docs-nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.docs-nav-list li a {
-  display: block;
-  padding: 6px 8px;
-  border-radius: 10px;
-  font-size: 0.86rem;
-  text-decoration: none;
-}
-
-.docs-nav-list li a:hover {
-  background: var(--primary-soft);
-}
-
-.docs-nav-list li a.is-current {
-  background: var(--primary);
-}
-
-/* 포털 본문 컨테이너 */
-.docs-content {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 20px 22px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-/* ============================
-   3) A4 문서뷰 스타일
-   ============================ */
-.doc-a4-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.doc-a4 {
-  max-width: 760px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 28px 26px 32px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border);
-}
-
-.doc-a4-header {
-  margin-bottom: 18px;
-}
-
-.doc-a4-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.doc-a4-meta {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-/* 문서 안의 기본 타이포 */
-.doc-a4 h2 {
-  font-size: 1.1rem;
-  margin: 18px 0 6px;
-}
-
-.doc-a4 h3 {
-  font-size: 1rem;
-  margin: 14px 0 4px;
-}
-
-.doc-a4 p {
-  margin: 6px 0;
-  font-size: 0.92rem;
-}
-
-.doc-a4 ul {
-  padding-left: 20px;
-  margin: 6px 0;
-  font-size: 0.92rem;
-}
-
-/* 이미지가 들어갈 때 여백 */
-.doc-a4-figure {
-  margin: 12px 0;
-  text-align: center;
-}
-
-.doc-a4-figure img {
-  max-width: 100%;
-  border-radius: 8px;
-  border: 1px solid #eee;
-}
-
-/* ============================
-   4) 탭 UI 스타일
-   ============================ */
-.tabs-root {
-  background: var(--bg-card);
-  border-radius: 16px;
-  padding: 18px 18px 22px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-.tabs-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  border-bottom: 1px solid #e3e3ea;
-  padding-bottom: 6px;
-  margin-bottom: 10px;
-}
-
-.tab-button {
-  border: none;
-  background: transparent;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  cursor: pointer;
-}
-
-.tab-button:hover {
-  background: var(--primary-soft);
-}
-
-.tab-button.is-active {
-  background: var(--primary);
-}
-
-.tab-panel {
-  display: none;
-  font-size: 0.92rem;
-}
-
-.tab-panel.is-active {
-  display: block;
-}
-
-/* ============================
-   5) FAQ 아코디언 스타일
+   FAQ 아코디언
    ============================ */
 .faq-list {
   max-width: 760px;
@@ -429,38 +181,49 @@ a:hover {
   box-shadow: var(--shadow-soft);
 }
 
+/* 질문 버튼: 세로 구조 */
 .faq-question {
   width: 100%;
   border: none;
   background: transparent;
   text-align: left;
-  padding: 12px 16px;
+  padding: 14px 16px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .faq-question span {
-  flex: 1;
+  width: 100%;
+  line-height: 1.4;
 }
 
+/* 화살표 아래 배치 */
 .faq-icon {
   font-size: 1.1rem;
-  margin-left: 8px;
+  align-self: center;
+  transition: transform 0.2s ease;
 }
 
+/* 답변 */
 .faq-answer {
   display: none;
-  padding: 0 16px 12px;
+  padding: 0 16px 14px;
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
+/* 열렸을 때 */
 .faq-item.is-open .faq-answer {
   display: block;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(180deg);
 }
 
 /* ============================
@@ -475,7 +238,9 @@ a:hover {
   background: var(--primary-soft);
 }
 
-/* 페이지 상단 이동 버튼 */
+/* ============================
+   페이지 상단 이동 버튼
+   ============================ */
 #scrollTopBtn {
   position: fixed;
   right: 20px;
@@ -485,9 +250,9 @@ a:hover {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
   border: none;
-  background: #f2d7e5; /* 연한 파스텔 분홍 */
+
+  background: #f2d7e5;
   color: #333;
   font-size: 20px;
   font-weight: bold;
@@ -500,18 +265,11 @@ a:hover {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* 보일 때 */
 #scrollTopBtn.is-visible {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
-/* 살짝 떠 있는 느낌 */
 #scrollTopBtn:hover {
   transform: translateY(-3px);
 }
-
-
-
-
